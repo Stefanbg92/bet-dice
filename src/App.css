@@ -1,38 +1,206 @@
-.App {
+.dice-container {
+  width: 554px;
+  max-width: 554.831px;
+  height: 600px;
   text-align: center;
+  margin: 0 auto;
+  background-image: url(\bg_77.jpg);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    justify-content: space-between;
+    margin-bottom: 15px;
+    text-align: left;
+    color:white;
+}
+.bet-amount {
+  flex: 1.5;
+  margin-left: 40px;
+}
+
+.payout {
+  flex:1;
+}
+.bet-size {
+  width: 40%;
+  background-color: #1c233f;
+  
+}
+
+input { 
+  text-align: center; 
+  color: white;
+}
+.btn-half {
+  cursor: pointer;
+}
+.btn-double {
+  cursor: pointer;
+}
+.btn-max {
+  cursor: pointer;
+}
+.pay-on-win {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  background-color: #1c233f;
+  background-size: 20px;
+  padding-left: 65px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.row2 {
+  background-color: #1c233f;
+  padding: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+      max-width: 554px;
+      color: white;
+}
+
+.roll-under {
+  flex: 1.2;
+    margin-right: 2.2%;
+}
+.payout {
+  flex: 1;
+}
+.win-chance{
+  flex: 1;
+}
+.title-roll-under  {
+  font-size: 13px;
+    color: #898a8c;
+}
+.content {
+  font-size: 34px;
+    font-weight: 600;
+}
+.prog-bar {
+  position: relative;
+}
+.my-progress {
+  max-width: 554px;
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 13.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 80%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+.btn-roll {
+  display: block;
+  margin: 0 auto;
+  min-width: 142px;
+  height: 48px;
+  line-height: 46px;
+  background-color: #28b6e4;
+  border: none;
+  border-radius: 6px;
+  padding: 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dice {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.balance {
+  color: white;
+  margin-top: 10px;
+}
+
+.won {
+  color: white;
 }
